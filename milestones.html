@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ocean Sense Milestones - Project proposal, presentations, and assessment details with dates and marks allocated." />
+  <title>Milestones | Ocean Sense</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>" />
+</head>
+
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">🌊</div><span class="nav-logo-text">Ocean<span>Sense</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="domain.html">Domain</a></li>
+      <li><a href="milestones.html" class="active">Milestones</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="presentations.html">Slides</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle"
+      aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div
+    style="padding:calc(var(--nav-height) + 4rem) 2rem 3rem;background:linear-gradient(135deg,var(--dark2),var(--dark));text-align:center;border-bottom:1px solid var(--glass-border)">
+    <span class="section-tag">Milestones</span>
+    <h1 class="section-title" style="margin-top:0.75rem">Project Assessments</h1>
+    <p class="section-desc">Track all project milestones, assessment details, submission dates, and marks allocated.</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <!-- FILTER BUTTONS -->
+      <div class="milestone-filter reveal">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All Milestones</button>
+        <button class="filter-btn" data-filter="done" id="filter-done">Completed</button>
+        <button class="filter-btn" data-filter="pending" id="filter-pending">Upcoming</button>
+      </div>
+
+      <!-- MILESTONE CARDS -->
+      <div class="milestones-grid" id="milestonesGrid">
+
+        <div class="glass-card milestone-card reveal" data-status="done">
+          <div class="milestone-num">01</div>
+          <div class="milestone-info">
+            <h3>Project Proposal</h3>
+            <p>Initial research proposal covering background, objectives, methodology, and timeline. Submitted to the
+              panel for approval with supporting literature evidence.</p>
+            <div style="margin-top:0.6rem"><span class="badge badge-done">✓ Completed</span></div>
+          </div>
+          <div class="milestone-meta">
+            <div class="milestone-date">📅 Oct 15, 2024</div>
+            <div class="milestone-marks">Marks: 15%</div>
+          </div>
+        </div>
+
+        <div class="glass-card milestone-card reveal" data-status="done">
+          <div class="milestone-num">02</div>
+          <div class="milestone-info">
+            <h3>Progress Presentation I</h3>
+            <p>First progress review covering literature survey completion, initial system design, sensor selection, and
+              early prototype demonstrations to the evaluation panel.</p>
+            <div style="margin-top:0.6rem"><span class="badge badge-done">✓ Completed</span></div>
+          </div>
+          <div class="milestone-meta">
+            <div class="milestone-date">📅 Dec 10, 2024</div>
+            <div class="milestone-marks">Marks: 15%</div>
+          </div>
+        </div>
+
+        <div class="glass-card milestone-card reveal" data-status="done">
+          <div class="milestone-num">03</div>
+          <div class="milestone-info">
+            <h3>Progress Presentation II</h3>
+            <p>Second progress review demonstrating integrated system prototype, AI model training results, data
+              pipeline testing, and dashboard MVP with real sensor data streams.</p>
+            <div style="margin-top:0.6rem"><span class="badge badge-done">✓ Completed</span></div>
+          </div>
+          <div class="milestone-meta">
+            <div class="milestone-date">📅 Feb 20, 2025</div>
+            <div class="milestone-marks">Marks: 18%</div>
+          </div>
+        </div>
+
+        <div class="glass-card milestone-card reveal" data-status="pending">
+          <div class="milestone-num">04</div>
+          <div class="milestone-info">
+            <h3>Final Assessment</h3>
+            <p>Complete system demonstration including full field deployment results, validated AI model performance,
+              analytics dashboard, and comprehensive final documentation package.</p>
+            <div style="margin-top:0.6rem"><span class="badge badge-pending">✓ Completed</span></div>
+          </div>
+          <div class="milestone-meta">
+            <div class="milestone-date">📅 May 30, 2025</div>
+            <div class="milestone-marks">Marks: 35%</div>
+          </div>
+        </div>
+
+        <div class="glass-card milestone-card reveal" data-status="pending">
+          <div class="milestone-num">05</div>
+          <div class="milestone-info">
+            <h3>Final Viva</h3>
+            <p>Oral examination by the panel assessing individual understanding of the research, implementation
+              decisions, technical depth, and ability to answer critical questions.</p>
+            <div style="margin-top:0.6rem"><span class="badge badge-pending">🔄 Upcoming</span></div>
+          </div>
+          <div class="milestone-meta">
+            <div class="milestone-date">📅 Jun 10, 2025</div>
+            <div class="milestone-marks">Marks: 17%</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PROGRESS SUMMARY -->
+      <div class="glass-card reveal" style="margin-top:2.5rem;text-align:center;padding:2.5rem">
+        <h3 style="font-family:'Space Grotesk',sans-serif;color:var(--white);margin-bottom:1.5rem">Overall Progress</h3>
+        <div style="display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <div>
+            <div style="font-size:2rem;font-weight:700;color:var(--accent2)">3/5</div>
+            <div style="color:var(--text-muted);font-size:0.85rem">Milestones Done</div>
+          </div>
+          <div>
+            <div style="font-size:2rem;font-weight:700;color:var(--primary)">48%</div>
+            <div style="color:var(--text-muted);font-size:0.85rem">Marks Secured</div>
+          </div>
+          <div>
+            <div style="font-size:2rem;font-weight:700;color:var(--accent)">52%</div>
+            <div style="color:var(--text-muted);font-size:0.85rem">Marks Remaining</div>
+          </div>
+        </div>
+        <div style="background:var(--dark3);border-radius:50px;height:10px;overflow:hidden">
+          <div style="width:80%;height:100%;background:var(--gradient);border-radius:50px;transition:width 1.5s ease">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">🌊</div><span class="nav-logo-text">Ocean<span>Sense</span></span>
+          </a>
+          <p>Intelligent ocean monitoring and analytics — SLIIT Faculty of Computing.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>More</h4>
+          <ul>
+            <li><a href="presentations.html">Slides</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 <span>OceanSense</span> Research Project — SLIIT Faculty of Computing | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('#milestonesGrid .milestone-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.status === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ocean Sense – An intelligent ocean monitoring and analytics research project using IoT and AI to preserve marine ecosystems." />
+  <title>Ocean Sense | Intelligent Ocean Monitoring</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">🌊</div>
+      <span class="nav-logo-text">Ocean<span>Sense</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+      <li><a href="domain.html" id="nav-domain">Domain</a></li>
+      <li><a href="milestones.html" id="nav-milestones">Milestones</a></li>
+      <li><a href="documents.html" id="nav-documents">Documents</a></li>
+      <li><a href="presentations.html" id="nav-slides">Slides</a></li>
+      <li><a href="about.html" id="nav-about">About Us</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🔬 Research Project 2024/25 &nbsp;|&nbsp; SLIIT</div>
+      <h1 class="hero-title">
+        Intelligent<br><span class="gradient-text">Ocean Monitoring</span><br>& Analytics
+      </h1>
+      <p class="hero-desc">
+        Harnessing IoT sensors, AI, and real-time data analytics to monitor, analyze, and preserve marine ecosystems —
+        bridging technology and ocean science.
+      </p>
+      <div class="hero-cta">
+        <a href="domain.html" class="btn btn-primary">🌊 Explore Research</a>
+        <a href="about.html" class="btn btn-outline">Meet the Team</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Team Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Research Areas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Live Monitoring</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">AI</div>
+          <div class="stat-label">Powered Analytics</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Project Overview</span>
+        <h2 class="section-title">What is Ocean Sense?</h2>
+        <p class="section-desc">An IoT-Based hybrid system for Real-Time detection and tracking of marine debris.</p> <!--A comprehensive research initiative to deploy smart sensor networks in ocean
+          environments, collecting critical data for marine conservation and environmental analysis. -->
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+        <div class="glass-card reveal" style="animation-delay:0.1s">
+          <div style="font-size:2.5rem;margin-bottom:1rem">🛰️</div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;color:var(--white);margin-bottom:0.75rem;font-size:1.1rem">
+            IoT Sensor Network</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem">Deploying a distributed network of underwater sensors to
+            continuously collect temperature, salinity, pH levels, and biodiversity data across target ocean zones.</p>
+        </div>
+        <div class="glass-card reveal" style="animation-delay:0.2s">
+          <div style="font-size:2.5rem;margin-bottom:1rem">🤖</div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;color:var(--white);margin-bottom:0.75rem;font-size:1.1rem">
+            AI-Driven Analysis</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem">Applying machine learning algorithms to identify
+            anomalies, predict ecosystem changes, and generate actionable insights from high-volume marine data streams.
+          </p>
+        </div>
+        <div class="glass-card reveal" style="animation-delay:0.3s">
+          <div style="font-size:2.5rem;margin-bottom:1rem">📊</div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;color:var(--white);margin-bottom:0.75rem;font-size:1.1rem">
+            Real-Time Dashboard</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem">A live analytics platform visualizing ocean health
+            metrics, alert systems for pollution events, and historical trend analysis for researchers and policymakers.
+          </p>
+        </div>
+        <div class="glass-card reveal" style="animation-delay:0.4s">
+          <div style="font-size:2.5rem;margin-bottom:1rem">🌿</div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;color:var(--white);margin-bottom:0.75rem;font-size:1.1rem">
+            Conservation Impact</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem">Supporting marine conservation efforts by providing
+            timely, accurate environmental data to government bodies, NGOs, and marine research institutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS SECTION -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Navigate</span>
+        <h2 class="section-title">Explore the Project</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+        <a href="domain.html" class="glass-card reveal"
+          style="text-decoration:none;text-align:center;padding:2rem 1rem">
+          <div style="font-size:2rem;margin-bottom:0.75rem">🔬</div>
+          <div style="font-weight:600;color:var(--white);margin-bottom:0.3rem">Domain</div>
+          <div style="font-size:0.8rem;color:var(--text-muted)">Research & Methodology</div>
+        </a>
+        <a href="milestones.html" class="glass-card reveal"
+          style="text-decoration:none;text-align:center;padding:2rem 1rem">
+          <div style="font-size:2rem;margin-bottom:0.75rem">🏆</div>
+          <div style="font-weight:600;color:var(--white);margin-bottom:0.3rem">Milestones</div>
+          <div style="font-size:0.8rem;color:var(--text-muted)">Project Assessments</div>
+        </a>
+        <a href="documents.html" class="glass-card reveal"
+          style="text-decoration:none;text-align:center;padding:2rem 1rem">
+          <div style="font-size:2rem;margin-bottom:0.75rem">📄</div>
+          <div style="font-weight:600;color:var(--white);margin-bottom:0.3rem">Documents</div>
+          <div style="font-size:0.8rem;color:var(--text-muted)">Project Reports</div>
+        </a>
+        <a href="presentations.html" class="glass-card reveal"
+          style="text-decoration:none;text-align:center;padding:2rem 1rem">
+          <div style="font-size:2rem;margin-bottom:0.75rem">📽️</div>
+          <div style="font-weight:600;color:var(--white);margin-bottom:0.3rem">Slides</div>
+          <div style="font-size:0.8rem;color:var(--text-muted)">Presentations</div>
+        </a>
+        <a href="about.html" class="glass-card reveal" style="text-decoration:none;text-align:center;padding:2rem 1rem">
+          <div style="font-size:2rem;margin-bottom:0.75rem">👥</div>
+          <div style="font-weight:600;color:var(--white);margin-bottom:0.3rem">About Us</div>
+          <div style="font-size:0.8rem;color:var(--text-muted)">Team Members</div>
+        </a>
+        <a href="contact.html" class="glass-card reveal"
+          style="text-decoration:none;text-align:center;padding:2rem 1rem">
+          <div style="font-size:2rem;margin-bottom:0.75rem">✉️</div>
+          <div style="font-weight:600;color:var(--white);margin-bottom:0.3rem">Contact</div>
+          <div style="font-size:0.8rem;color:var(--text-muted)">Get in Touch</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0.5rem">
+            <div class="nav-logo-icon">🌊</div>
+            <span class="nav-logo-text">Ocean<span>Sense</span></span>
+          </a>
+          <p>An intelligent ocean monitoring and analytics research project developed at SLIIT, leveraging IoT and AI to
+            protect marine ecosystems.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>More</h4>
+          <ul>
+            <li><a href="presentations.html">Slides</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 <span>OceanSense</span> Research Project — SLIIT Faculty of Computing | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ocean Sense Domain - Literature survey, research gap, research problem, objectives, methodology and technologies used." />
+  <title>Domain | Ocean Sense</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>" />
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">🌊</div>
+    <span class="nav-logo-text">Ocean<span>Sense</span></span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="domain.html" class="active">Domain</a></li>
+    <li><a href="milestones.html">Milestones</a></li>
+    <li><a href="documents.html">Documents</a></li>
+    <li><a href="presentations.html">Slides</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- PAGE HERO -->
+<div style="padding:calc(var(--nav-height) + 4rem) 2rem 3rem;background:linear-gradient(135deg,var(--dark2),var(--dark));text-align:center;border-bottom:1px solid var(--glass-border)">
+  <span class="section-tag">Domain</span>
+  <h1 class="section-title" style="margin-top:0.75rem">Research Domain</h1>
+  <p class="section-desc">Explore the scientific foundation, research gaps, and technical framework driving the Ocean Sense project.</p>
+</div>
+
+<!-- LITERATURE SURVEY -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">01</span>
+      <h2 class="section-title">Literature Survey</h2>
+      <p class="section-desc">A synthesis of existing research on ocean monitoring, IoT in marine environments, and AI-based analytics.</p>
+    </div>
+    <div class="domain-grid">
+      <div class="glass-card domain-card reveal">
+        <div class="domain-card-icon">📡</div>
+        <h3>IoT in Marine Environments</h3>
+        <p>Existing studies demonstrate the feasibility of deploying wireless sensor networks in shallow and deep oceanic zones. Challenges include power supply, data transmission latency, and sensor corrosion resistance. Multiple frameworks have been proposed using LoRaWAN and satellite communication.</p>
+      </div>
+      <div class="glass-card domain-card reveal">
+        <div class="domain-card-icon">🧬</div>
+        <h3>Marine Ecosystem Monitoring</h3>
+        <p>Traditional ocean monitoring relies on infrequent manual surveys and moored buoys with limited sensor arrays. Recent literature explores autonomous underwater vehicles (AUVs) and satellite imaging for broader coverage, though real-time analytics capabilities remain limited.</p>
+      </div>
+      <div class="glass-card domain-card reveal">
+        <div class="domain-card-icon">🤖</div>
+        <h3>AI & Machine Learning Applications</h3>
+        <p>Deep learning models including LSTM networks and CNNs have been applied to oceanographic time-series data for anomaly detection. Transfer learning approaches show promise for adapting models across different geographic ocean regions with minimal retraining.</p>
+      </div>
+      <div class="glass-card domain-card reveal">
+        <div class="domain-card-icon">🌡️</div>
+        <h3>Climate Change & Ocean Health</h3>
+        <p>Rising sea temperatures, ocean acidification, and deoxygenation are documented threats to marine biodiversity. Literature highlights urgent needs for continuous, high-resolution monitoring systems capable of detecting early warning signals of ecosystem degradation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH GAP -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">02</span>
+      <h2 class="section-title">Research Gap</h2>
+    </div>
+    <div class="glass-card reveal" style="max-width:800px;margin:0 auto;border-left:4px solid var(--primary)">
+      <p style="color:var(--text);font-size:1rem;line-height:1.8;margin-bottom:1.25rem">
+        Despite significant advances in individual areas of IoT hardware, marine sensing, and AI analytics, <strong style="color:var(--primary)">no unified, cost-effective platform</strong> exists that integrates all three layers seamlessly for real-time ocean monitoring at scale.
+      </p>
+      <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7">
+        Current solutions suffer from: high deployment costs, proprietary data silos, insufficient AI integration for predictive analysis, and lack of open-access dashboards for research communities. Ocean Sense addresses these gaps by providing an end-to-end open-architecture solution.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH PROBLEM -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">03</span>
+      <h2 class="section-title">Research Problem</h2>
+    </div>
+    <div class="glass-card reveal" style="max-width:800px;margin:0 auto;text-align:center;padding:2.5rem">
+      <div style="font-size:3rem;margin-bottom:1.25rem">❓</div>
+      <blockquote style="font-family:'Space Grotesk',sans-serif;font-size:1.2rem;color:var(--white);line-height:1.6;font-style:italic;margin-bottom:1rem">
+        "How can an integrated IoT-AI system be designed and deployed to provide continuous, real-time monitoring of marine ecosystem health parameters, enabling early detection of environmental threats and supporting data-driven conservation decisions?"
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIVES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">04</span>
+      <h2 class="section-title">Research Objectives</h2>
+    </div>
+    <div style="display:grid;gap:1rem;max-width:800px;margin:0 auto">
+      <div class="glass-card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">01</div>
+        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Design a Scalable IoT Sensor Architecture</h3><p style="color:var(--text-muted);font-size:0.88rem">Develop a low-power, corrosion-resistant sensor node capable of measuring temperature, salinity, pH, turbidity, and dissolved oxygen in marine environments.</p></div>
+      </div>
+      <div class="glass-card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">02</div>
+        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Implement Real-Time Data Transmission</h3><p style="color:var(--text-muted);font-size:0.88rem">Establish a reliable, low-latency communication pipeline from deployed sensors to a cloud-based data processing platform using LoRaWAN and MQTT protocols.</p></div>
+      </div>
+      <div class="glass-card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">03</div>
+        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Develop AI-Based Anomaly Detection Models</h3><p style="color:var(--text-muted);font-size:0.88rem">Train machine learning models on historical oceanographic data to detect anomalies, predict pollution events, and identify ecosystem stress indicators with high accuracy.</p></div>
+      </div>
+      <div class="glass-card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">04</div>
+        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Build an Accessible Analytics Dashboard</h3><p style="color:var(--text-muted);font-size:0.88rem">Create an intuitive web-based visualization platform for researchers, conservationists, and policymakers to access, analyze, and export real-time and historical ocean data.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">05</span>
+      <h2 class="section-title">Methodology</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem">
+      <div class="glass-card reveal" style="text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🔍</div>
+        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase 1: Requirements Analysis</h3>
+        <p style="color:var(--text-muted);font-size:0.82rem">Literature review, stakeholder interviews, and identification of key ocean health parameters to monitor.</p>
+      </div>
+      <div class="glass-card reveal" style="text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.75rem">⚙️</div>
+        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase 2: System Design</h3>
+        <p style="color:var(--text-muted);font-size:0.82rem">Hardware selection, sensor node prototyping, cloud architecture design, and database schema planning.</p>
+      </div>
+      <div class="glass-card reveal" style="text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🏗️</div>
+        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase 3: Development</h3>
+        <p style="color:var(--text-muted);font-size:0.82rem">Agile development of sensor firmware, backend APIs, AI models, and the analytics dashboard frontend.</p>
+      </div>
+      <div class="glass-card reveal" style="text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🧪</div>
+        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase 4: Testing & Validation</h3>
+        <p style="color:var(--text-muted);font-size:0.82rem">Lab and field testing of sensor accuracy, system integration tests, AI model validation, and performance benchmarking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGIES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">06</span>
+      <h2 class="section-title">Technologies Used</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
+      <div class="glass-card reveal">
+        <h3 style="color:var(--primary);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">HARDWARE & IoT</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">ESP32</span><span class="tech-tag">Arduino</span><span class="tech-tag">pH Sensor</span>
+          <span class="tech-tag">Temperature Probe</span><span class="tech-tag">Turbidity Sensor</span><span class="tech-tag">LoRa Module</span>
+        </div>
+      </div>
+      <div class="glass-card reveal">
+        <h3 style="color:var(--accent);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">BACKEND & CLOUD</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Node.js</span><span class="tech-tag">Python</span><span class="tech-tag">MQTT</span>
+          <span class="tech-tag">AWS IoT Core</span><span class="tech-tag">MongoDB</span><span class="tech-tag">REST API</span>
+        </div>
+      </div>
+      <div class="glass-card reveal">
+        <h3 style="color:var(--accent2);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">AI & ANALYTICS</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">TensorFlow</span><span class="tech-tag">LSTM Networks</span><span class="tech-tag">scikit-learn</span>
+          <span class="tech-tag">Pandas</span><span class="tech-tag">Anomaly Detection</span><span class="tech-tag">Time-Series ML</span>
+        </div>
+      </div>
+      <div class="glass-card reveal">
+        <h3 style="color:var(--primary);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">FRONTEND & VISUALIZATION</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">React.js</span><span class="tech-tag">Chart.js</span><span class="tech-tag">D3.js</span>
+          <span class="tech-tag">WebSocket</span><span class="tech-tag">Leaflet Maps</span><span class="tech-tag">HTML/CSS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🌊</div><span class="nav-logo-text">Ocean<span>Sense</span></span></a>
+        <p>Intelligent ocean monitoring and analytics research project — SLIIT Faculty of Computing.</p>
+      </div>
+      <div class="footer-links"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="domain.html">Domain</a></li><li><a href="milestones.html">Milestones</a></li><li><a href="documents.html">Documents</a></li></ul></div>
+      <div class="footer-links"><h4>More</h4><ul><li><a href="presentations.html">Slides</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 <span>OceanSense</span> Research Project — SLIIT Faculty of Computing | All Rights Reserved</p></div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

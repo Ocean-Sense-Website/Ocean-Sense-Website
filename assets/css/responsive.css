@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .site-header,
+  .site-footer {
+    padding: 1rem;
+  }
+}
