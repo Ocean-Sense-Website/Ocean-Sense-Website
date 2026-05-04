@@ -125,3 +125,32 @@ document.querySelectorAll('.glass-card').forEach(card => {
     card.style.transform = '';
   });
 });
+
+// ---- DOCUMENTS: view and download functionality ----
+document.querySelectorAll('.doc-item').forEach(item => {
+  const fileUrl = item.getAttribute('data-file');
+  const viewBtn = item.querySelector('.btn-view');
+  const downloadBtn = item.querySelector('.btn-download');
+  
+  if (viewBtn) {
+    viewBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      window.open(fileUrl, '_blank');
+    });
+  }
+  
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const fileName = fileUrl.split('/').pop();
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+});

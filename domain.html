@@ -39,28 +39,28 @@
     <div class="section-header reveal">
       <span class="section-tag">01</span>
       <h2 class="section-title">Literature Survey</h2>
-      <p class="section-desc">A synthesis of existing research on ocean monitoring, IoT in marine environments, and AI-based analytics.</p>
+      <p class="section-desc">Synthesis of MAC protocol evolution, energy harvesting systems, QoS provisioning, and LoRa-based marine IoT applications.</p>
     </div>
     <div class="domain-grid">
       <div class="glass-card domain-card reveal">
         <div class="domain-card-icon">📡</div>
-        <h3>IoT in Marine Environments</h3>
-        <p>Existing studies demonstrate the feasibility of deploying wireless sensor networks in shallow and deep oceanic zones. Challenges include power supply, data transmission latency, and sensor corrosion resistance. Multiple frameworks have been proposed using LoRaWAN and satellite communication.</p>
+        <h3>Evolution of MAC Protocols in UWSNs</h3>
+        <p>Traditional underwater MAC protocols (FAMA, MACA-U) rely on acoustic communication with long propagation delays. Recent research has shifted toward adapting terrestrial LPWAN technologies—especially LoRa—for near-surface marine monitoring. LoRa's Chirp Spread Spectrum (CSS) modulation provides excellent link budget and robustness with minimal transmission power.</p>
       </div>
       <div class="glass-card domain-card reveal">
-        <div class="domain-card-icon">🧬</div>
-        <h3>Marine Ecosystem Monitoring</h3>
-        <p>Traditional ocean monitoring relies on infrequent manual surveys and moored buoys with limited sensor arrays. Recent literature explores autonomous underwater vehicles (AUVs) and satellite imaging for broader coverage, though real-time analytics capabilities remain limited.</p>
+        <div class="domain-card-icon">⚡</div>
+        <h3>Energy Harvesting & MAC Protocols</h3>
+        <p>Energy Harvesting MAC (EH-MAC) protocols achieve Energy Neutral Operation (ENO), where average harvested energy matches or exceeds consumption. Modern approaches employ predictive energy management with adaptive duty cycling using EWMA-based solar forecasting and wave energy estimation. Cross-layer integration between energy subsystem and MAC layer is essential for optimal performance.</p>
       </div>
       <div class="glass-card domain-card reveal">
-        <div class="domain-card-icon">🤖</div>
-        <h3>AI & Machine Learning Applications</h3>
-        <p>Deep learning models including LSTM networks and CNNs have been applied to oceanographic time-series data for anomaly detection. Transfer learning approaches show promise for adapting models across different geographic ocean regions with minimal retraining.</p>
+        <div class="domain-card-icon">🎯</div>
+        <h3>QoS Provisioning in LoRa Networks</h3>
+        <p>Standard LoRaWAN treats all packets as best-effort, lacking priority differentiation. Recent studies propose priority queuing, parameter manipulation (Spreading Factor adjustment), and reinforcement learning approaches. A critical gap exists in coupling Energy Harvesting with QoS requirements, where high reliability often demands high energy consumption.</p>
       </div>
       <div class="glass-card domain-card reveal">
-        <div class="domain-card-icon">🌡️</div>
-        <h3>Climate Change & Ocean Health</h3>
-        <p>Rising sea temperatures, ocean acidification, and deoxygenation are documented threats to marine biodiversity. Literature highlights urgent needs for continuous, high-resolution monitoring systems capable of detecting early warning signals of ecosystem degradation.</p>
+        <div class="domain-card-icon">🌊</div>
+        <h3>Marine Debris Detection & Tracking</h3>
+        <p>Marine plastic pollution is an escalating crisis with millions of metric tons entering oceans annually. Current monitoring relies on sporadic surveys, satellite imagery, and UAVs—all limited by temporal resolution and operational costs. A distributed IoT swarm architecture can provide continuous, in-situ monitoring with real-time detection and drift pattern tracking.</p>
       </div>
     </div>
   </div>
@@ -74,11 +74,15 @@
       <h2 class="section-title">Research Gap</h2>
     </div>
     <div class="glass-card reveal" style="max-width:800px;margin:0 auto;border-left:4px solid var(--primary)">
-      <p style="color:var(--text);font-size:1rem;line-height:1.8;margin-bottom:1.25rem">
-        Despite significant advances in individual areas of IoT hardware, marine sensing, and AI analytics, <strong style="color:var(--primary)">no unified, cost-effective platform</strong> exists that integrates all three layers seamlessly for real-time ocean monitoring at scale.
+      <h3 style="color:var(--white);margin-bottom:1rem">Three Critical Gaps Identified:</h3>
+      <p style="color:var(--text);font-size:0.95rem;line-height:1.8;margin-bottom:1rem">
+        <strong style="color:var(--primary)">Gap 1 - Unified Cross-Layer EH-MAC Design:</strong> Energy Harvesting and MAC scheduling are treated as separate optimization domains. No unified framework integrates dual-source (solar + wave) stochastic energy prediction directly into LoRa MAC scheduling logic, leading to suboptimal duty cycling and unreliable data delivery.
+      </p>
+      <p style="color:var(--text);font-size:0.95rem;line-height:1.8;margin-bottom:1rem">
+        <strong style="color:var(--primary)">Gap 2 - Resilience Under Swarm Mobility:</strong> Most LoRa MAC techniques are evaluated for static deployments. Surface buoys drift with currents, pitch with waves, and experience frequent wave-induced occlusion, creating rapid SNR fluctuations and hidden-node scenarios that existing algorithms cannot handle at required temporal scales.
       </p>
       <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7">
-        Current solutions suffer from: high deployment costs, proprietary data silos, insufficient AI integration for predictive analysis, and lack of open-access dashboards for research communities. Ocean Sense addresses these gaps by providing an end-to-end open-architecture solution.
+        <strong style="color:var(--primary)">Gap 3 - Practical Validation:</strong> Although many studies propose advanced energy prediction techniques, most rely on synthetic datasets or computationally heavy models unsuitable for microcontroller deployment. Lightweight approaches (EWMA, regression) have been suggested but rarely validated on real embedded hardware in stochastic marine environments.
       </p>
     </div>
   </div>
@@ -90,12 +94,16 @@
     <div class="section-header reveal">
       <span class="section-tag">03</span>
       <h2 class="section-title">Research Problem</h2>
+      <p class="section-desc">Energy-neutral communication with priority-driven data delivery in marine debris monitoring.</p>
     </div>
     <div class="glass-card reveal" style="max-width:800px;margin:0 auto;text-align:center;padding:2.5rem">
       <div style="font-size:3rem;margin-bottom:1.25rem">❓</div>
-      <blockquote style="font-family:'Space Grotesk',sans-serif;font-size:1.2rem;color:var(--white);line-height:1.6;font-style:italic;margin-bottom:1rem">
-        "How can an integrated IoT-AI system be designed and deployed to provide continuous, real-time monitoring of marine ecosystem health parameters, enabling early detection of environmental threats and supporting data-driven conservation decisions?"
+      <blockquote style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;color:var(--white);line-height:1.7;font-style:italic;margin-bottom:1.5rem;padding:1.5rem;border-radius:10px;background:rgba(14,165,233,0.1)">
+        "How can a novel cross-layer Energy-Resilient Adaptive Communication (ERAC) protocol be designed and implemented to enable reliable, priority-based data transmission for marine debris monitoring, while ensuring energy neutrality through predictive management of stochastic solar and wave energy sources on resource-constrained LoRa nodes?"
       </blockquote>
+      <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.6;text-align:center">
+        <strong>Core Challenge:</strong> Deploying marine surface sensor networks for real-time debris monitoring requires simultaneous energy neutrality and priority-driven delivery under highly variable energy availability and intermittent connectivity caused by wave occlusion, mobility, and environmental instability.
+      </p>
     </div>
   </div>
 </section>
@@ -106,23 +114,24 @@
     <div class="section-header reveal">
       <span class="section-tag">04</span>
       <h2 class="section-title">Research Objectives</h2>
+      <p class="section-desc">Design, develop, and validate the Energy-Resilient Adaptive Communication (ERAC) protocol for LoRa-based marine IoT.</p>
     </div>
     <div style="display:grid;gap:1rem;max-width:800px;margin:0 auto">
       <div class="glass-card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">01</div>
-        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Design a Scalable IoT Sensor Architecture</h3><p style="color:var(--text-muted);font-size:0.88rem">Develop a low-power, corrosion-resistant sensor node capable of measuring temperature, salinity, pH, turbidity, and dissolved oxygen in marine environments.</p></div>
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">SO1</div>
+        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">ERAC Architecture Design</h3><p style="color:var(--text-muted);font-size:0.88rem">Design a cross-layer MAC architecture that interfaces the physical energy harvesting hardware with the data link layer, enabling dynamic access to State-of-Charge (SoC) and energy generation rates for protocol decision-making.</p></div>
       </div>
       <div class="glass-card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">02</div>
-        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Implement Real-Time Data Transmission</h3><p style="color:var(--text-muted);font-size:0.88rem">Establish a reliable, low-latency communication pipeline from deployed sensors to a cloud-based data processing platform using LoRaWAN and MQTT protocols.</p></div>
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">SO2</div>
+        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Predictive Energy Management</h3><p style="color:var(--text-muted);font-size:0.88rem">Develop and implement lightweight algorithms for forecasting solar and wave energy availability on embedded microcontrollers (EWMA-based), enabling adaptive duty cycling that prevents energy depletion while maximizing network availability.</p></div>
       </div>
       <div class="glass-card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">03</div>
-        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Develop AI-Based Anomaly Detection Models</h3><p style="color:var(--text-muted);font-size:0.88rem">Train machine learning models on historical oceanographic data to detect anomalies, predict pollution events, and identify ecosystem stress indicators with high accuracy.</p></div>
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">SO3</div>
+        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">QoS-Aware Scheduling</h3><p style="color:var(--text-muted);font-size:0.88rem">Design a priority-based packet scheduling mechanism that differentiates between critical debris alerts and routine telemetry, optimizing transmission parameters (Spreading Factor, backoff timers) to guarantee delivery of high-priority data.</p></div>
       </div>
       <div class="glass-card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">04</div>
-        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Build an Accessible Analytics Dashboard</h3><p style="color:var(--text-muted);font-size:0.88rem">Create an intuitive web-based visualization platform for researchers, conservationists, and policymakers to access, analyze, and export real-time and historical ocean data.</p></div>
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;flex-shrink:0">SO4</div>
+        <div><h3 style="color:var(--white);font-size:1rem;margin-bottom:0.4rem">Validation & Implementation</h3><p style="color:var(--text-muted);font-size:0.88rem">Validate ERAC using NS-3 network simulator (10-15 nodes) under stochastic marine channel conditions, and implement on a hardware prototype (ESP32/Raspberry Pi + SX1276/SX1262 LoRa) to demonstrate real-world feasibility.</p></div>
       </div>
     </div>
   </div>
@@ -137,24 +146,24 @@
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem">
       <div class="glass-card reveal" style="text-align:center">
-        <div style="font-size:2rem;margin-bottom:0.75rem">🔍</div>
-        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase 1: Requirements Analysis</h3>
-        <p style="color:var(--text-muted);font-size:0.82rem">Literature review, stakeholder interviews, and identification of key ocean health parameters to monitor.</p>
+        <div style="font-size:2rem;margin-bottom:0.75rem">�</div>
+        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase I: Research & Design</h3>
+        <p style="color:var(--text-muted);font-size:0.82rem">Literature survey on EH-MAC, QoS, LoRa; develop ERAC architecture and mathematical models. Deliverable: ERAC Specification Document (Aug-Oct 2025).</p>
       </div>
       <div class="glass-card reveal" style="text-align:center">
-        <div style="font-size:2rem;margin-bottom:0.75rem">⚙️</div>
-        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase 2: System Design</h3>
-        <p style="color:var(--text-muted);font-size:0.82rem">Hardware selection, sensor node prototyping, cloud architecture design, and database schema planning.</p>
+        <div style="font-size:2rem;margin-bottom:0.75rem">💻</div>
+        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase II: Implementation</h3>
+        <p style="color:var(--text-muted);font-size:0.82rem">Implement custom NS-3 modules for energy harvesting and MAC; develop firmware. Deliverable: Functional NS-3 Prototype (Nov 2025-Jan 2026).</p>
       </div>
       <div class="glass-card reveal" style="text-align:center">
-        <div style="font-size:2rem;margin-bottom:0.75rem">🏗️</div>
-        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase 3: Development</h3>
-        <p style="color:var(--text-muted);font-size:0.82rem">Agile development of sensor firmware, backend APIs, AI models, and the analytics dashboard frontend.</p>
+        <div style="font-size:2rem;margin-bottom:0.75rem">🔧</div>
+        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase III: Hardware</h3>
+        <p style="color:var(--text-muted);font-size:0.82rem">Build microcontroller + LoRa nodes; integrate sensors and energy components. Deliverable: Functional Hardware Nodes (Jan-Mar 2026).</p>
       </div>
       <div class="glass-card reveal" style="text-align:center">
-        <div style="font-size:2rem;margin-bottom:0.75rem">🧪</div>
-        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase 4: Testing & Validation</h3>
-        <p style="color:var(--text-muted);font-size:0.82rem">Lab and field testing of sensor accuracy, system integration tests, AI model validation, and performance benchmarking.</p>
+        <div style="font-size:2rem;margin-bottom:0.75rem">📊</div>
+        <h3 style="color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Phase IV: Validation</h3>
+        <p style="color:var(--text-muted);font-size:0.82rem">Execute NS-3 simulations (10-15 nodes); conduct field tests. Deliverable: Simulation Results & Data (Mar-May 2026).</p>
       </div>
     </div>
   </div>
@@ -169,31 +178,31 @@
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
       <div class="glass-card reveal">
-        <h3 style="color:var(--primary);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">HARDWARE & IoT</h3>
+        <h3 style="color:var(--primary);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">HARDWARE & LoRa NODES</h3>
         <div class="tech-tags">
-          <span class="tech-tag">ESP32</span><span class="tech-tag">Arduino</span><span class="tech-tag">pH Sensor</span>
-          <span class="tech-tag">Temperature Probe</span><span class="tech-tag">Turbidity Sensor</span><span class="tech-tag">LoRa Module</span>
+          <span class="tech-tag">ESP32-S3</span><span class="tech-tag">Raspberry Pi</span><span class="tech-tag">SX1276/SX1262</span>
+          <span class="tech-tag">Solar Panel</span><span class="tech-tag">Li-Ion Battery</span><span class="tech-tag">INA219 Sensor</span>
         </div>
       </div>
       <div class="glass-card reveal">
-        <h3 style="color:var(--accent);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">BACKEND & CLOUD</h3>
+        <h3 style="color:var(--accent);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">SIMULATION & TESTING</h3>
         <div class="tech-tags">
-          <span class="tech-tag">Node.js</span><span class="tech-tag">Python</span><span class="tech-tag">MQTT</span>
-          <span class="tech-tag">AWS IoT Core</span><span class="tech-tag">MongoDB</span><span class="tech-tag">REST API</span>
+          <span class="tech-tag">NS-3</span><span class="tech-tag">AquaSim-NG</span><span class="tech-tag">C++</span>
+          <span class="tech-tag">Arduino IDE</span><span class="tech-tag">Python</span><span class="tech-tag">Matlab</span>
         </div>
       </div>
       <div class="glass-card reveal">
-        <h3 style="color:var(--accent2);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">AI & ANALYTICS</h3>
+        <h3 style="color:var(--accent2);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">ENERGY PREDICTION & MAC</h3>
         <div class="tech-tags">
-          <span class="tech-tag">TensorFlow</span><span class="tech-tag">LSTM Networks</span><span class="tech-tag">scikit-learn</span>
-          <span class="tech-tag">Pandas</span><span class="tech-tag">Anomaly Detection</span><span class="tech-tag">Time-Series ML</span>
+          <span class="tech-tag">EWMA Forecasting</span><span class="tech-tag">IMU Processing</span><span class="tech-tag">Priority Queuing</span>
+          <span class="tech-tag">Spreading Factor</span><span class="tech-tag">Backoff Control</span><span class="tech-tag">Cross-Layer Design</span>
         </div>
       </div>
       <div class="glass-card reveal">
-        <h3 style="color:var(--primary);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">FRONTEND & VISUALIZATION</h3>
+        <h3 style="color:var(--primary);font-size:0.9rem;font-weight:600;margin-bottom:1rem;letter-spacing:0.05em">COMMUNICATION PROTOCOLS</h3>
         <div class="tech-tags">
-          <span class="tech-tag">React.js</span><span class="tech-tag">Chart.js</span><span class="tech-tag">D3.js</span>
-          <span class="tech-tag">WebSocket</span><span class="tech-tag">Leaflet Maps</span><span class="tech-tag">HTML/CSS</span>
+          <span class="tech-tag">LoRa Point-to-Point</span><span class="tech-tag">Direct RF Link</span><span class="tech-tag">Sub-GHz ISM</span>
+          <span class="tech-tag">Custom MAC Headers</span><span class="tech-tag">CSS Modulation</span><span class="tech-tag">868/915 MHz</span>
         </div>
       </div>
     </div>
